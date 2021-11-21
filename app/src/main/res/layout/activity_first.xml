@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/Textview"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="257dp"
-        android:layout_height="187dp"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:onClick="OnButtonClicked"
         android:text="Run"
+        android:textSize="80sp"
         tools:ignore="MissingConstraints,OnClick"
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <TextView
+        android:id="@+id/Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="185dp"
+        android:text="매장 매대 탐색중..."
+        android:textSize="40sp"
+        android:layout_gravity="center"/>
+
     <Button
         android:id="@+id/zxing_barcode_scanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="279dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:onClick="OnButtonClicked"
         android:text="바코드"
+        android:textSize="80sp"
         tools:ignore="MissingConstraints,OnClick"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="655dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

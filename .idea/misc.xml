@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/cani0/AndroidStudioProjects/Ewha_capstone_team_9/app/src/main/res/layout/activity_barcode.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cani0/AndroidStudioProjects/Ewha_capstone_team_9/app/src/main/res/layout/activity_first.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cani0/AndroidStudioProjects/Ewha_capstone_team_9/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/cani0/AndroidStudioProjects/Ewha_capstone_team_9/app/src/main/res/layout/custom_barcode_scanner.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_barcode.xml" value="0.490036231884058" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_first.xml" value="0.5390625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.5390625" />
