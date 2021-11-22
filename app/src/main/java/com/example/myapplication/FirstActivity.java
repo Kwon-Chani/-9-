@@ -19,8 +19,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -78,14 +80,31 @@ public class FirstActivity extends AppCompatActivity implements BeaconConsumer, 
         }
         tts = new TextToSpeech(this, this);
         Button zxing_barcode_scanner = (Button) findViewById(R.id.zxing_barcode_scanner);
+        IntentIntegrator intentIntegrator = new IntentIntegrator(this);
         zxing_barcode_scanner.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), BarcodeActivity.class);
-                startActivity(intent);
+                intentIntegrator.setBeepEnabled(false);//바코드 인식시 소리
+                intentIntegrator.setCaptureActivity(BarcodeActivity.class);
+                intentIntegrator.initiateScan();
             }
         });
+    }
 
+    @Override//두 번만 됩니다...
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() == null) {
+                Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "선택하신 제품은 " + result.getContents(), Toast.LENGTH_SHORT).show();
+                speakOut(result.getContents());
+                startActivity(new Intent(this, BarcodeActivity.class));
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     @Override

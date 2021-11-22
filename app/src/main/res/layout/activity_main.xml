@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/startbutton"
-        android:layout_width="319dp"
-        android:layout_height="156dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:text="쇼핑 시작"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/expbutton"
-        android:layout_width="319dp"
-        android:layout_height="156dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="어플 설명"
         android:textSize="40sp"
         tools:layout_editor_absoluteX="55dp"

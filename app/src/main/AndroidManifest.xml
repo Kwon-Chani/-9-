@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:hardwareAccelerated="true">
-        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+        <activity android:name=".qrqr"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation"/>
         <activity
